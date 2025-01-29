@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: "Barlow", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #131313;
+
+    background-color: #131313;
+}
+div{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+    margin: 0;
+}
+nav{
+    background-color: inherit;
+}
+ul{
+    background-color: inherit;
+}
+li{
+    display: inline-block;
+    background-color: inherit;
+}
+h1{
+    font-weight: bolder;
+    background-color: inherit;
+}
+.content{
+    margin-top: 20vh;
+}
+
+.header{
+    display: flex;
+    background-color: green;
+    position: absolute;
+    height: 10vh;
+    top: 0;
+    width: 100%;
+    
+}
+.navigation_bar{
+   
+display: inline-flex;
+background-color: green;
+position: fixed;
+height: 10vh;
+top: 0;
+width: 100%;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+align-content: center;
+padding-left: 2.5vw;
+padding-right: 2.5vw;
+overflow-y: hidden;
+box-shadow: 1vh 0vh #00000020;
+}
+
+.logo{
+    background-color: inherit;
+    max-width: 95%;
+    max-height: 95%;
+}
+
+.nav_btn{
+    position:relative;
+    align-content: center;
+    background-color: transparent;
+    border: none;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: font-weight 0.5s ease-in-out, color 0.5s ease-in-out, font-size 0.5s ease-in-out, padding-left 0.5s ease-in-out, padding-right 0.5s ease-in-out;
+    cursor:pointer;
+}
+.nav_btn_active{
+    align-content: center;
+    background-color: transparent;
+    border: none;
+    font-weight: bolder;
+    font-size: larger;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: font-weight 0.3s ease-in-out, color 0.3s ease-in-out, font-size 0.3s ease-in-out, padding-left 0.3s ease-in-out, padding-right 0.3s ease-in-out;
+    cursor: pointer;
+}
