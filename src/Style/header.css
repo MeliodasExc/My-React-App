@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+#header{
+    display: flex;
+    position: absolute;
+    height: 10vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9001;
+    
+}
+.navigation_bar{
+   
+display: inline-flex;
+background-color: #fff8e7;
+position: fixed;
+z-index: 9000;
+height: 10vh;
+top: 0;
+width: 100%;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+align-content: center;
+padding-left: 2.5vw;
+padding-right: 2.5vw;
+overflow-y: hidden;
+box-shadow: 1vh 0vh #00000020;
+}
+
+.logo{
+    background-color: inherit;
+    max-width: 95%;
+    max-height: 95%;
+    transition: all 0.6s ease-in-out;
+}
+.logo img:hover{
+    transform:rotate(720deg) scale(1.1);
+    transition: all 0.8s ease-in-out;
+}
+.name{
+    position: absolute;
+    left: 10%;
+}
+.name a{
+    text-decoration: none;
+    font-weight: bolder;
+    cursor: default;
+    transition: 0.6s ease-in-out;
+}
+.name a:hover{
+    color:#3e3e3e;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+.nav_btn_Holder{
+    background-color: transparent;
+}
+.nav_btn, .nav_btn_active {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    width: 90px;
+    height: 40px; 
+    margin: 0 10px;
+    padding: 5px 10px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;
+}
+.nav_btn_active {
+    scale: 1.25;
+    color: #3e3e3e;
+    background-color: transparent;
+}
+.login_btn, .login_btn_active {
+    position: relative;
+    background-color: transparent;
+    border: solid 0px #000000;
+    border-radius: 15%;
+    width: 90px;
+    height: 40px; 
+    margin: 0 10px;
+    padding: 5px 10px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;
+}
+.login_btn_active{
+    color: #fff8e7;
+    background-color: #131313;
+}
+
+
+@media (max-width: 1360px) {
+
+    #root{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .logo{
+        max-width: 95%;
+        max-height: 95%;
+    }
+    .navigation_bar {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+    .nav_btn {
+        width: 90px;
+        height: 35px;
+    }
+    .content {
+        margin-top: 10vh;
+    }
+    .name{
+        position: absolute;
+        left: 15%;
+        cursor: default;
+    }
+}
+
+@media (max-width: 1024px) {
+    #header {
+        height: 10%;
+    }
+    .logo{
+        max-width: 75%;
+        max-height: 75%;
+    }
+    .navigation_bar {
+        padding-left: 5vw;
+        padding-right: 5vw;
+        height: 10vh;
+    }
+
+    .nav_btn {
+        width: 90px;
+        height: 35px;
+        margin: 5px 0;
+        font-size: medium;
+    }
+    .name{
+        position: absolute;
+        left: 15%;
+        cursor: default;
+        font-size: larger;
+    }
+}
+
+@media (max-width: 768px) {
+    #header {
+        height: 10%;
+    }
+    .logo{
+        max-width: 65%;
+        max-height: 65%;
+    }
+
+    .navigation_bar {
+        padding-left: 5vw;
+        padding-right: 5vw;
+        height: 10vh;
+    }
+
+    .nav_btn {
+        width: 75px;
+        height: 35px;
+        margin: 5px 0;
+        font-size: small;
+    }
+    .name{
+        position: absolute;
+        left: 15%;
+        cursor: default;
+        font-size: larger;
+    }
+}
+
+@media (max-width: 480px) {
+    #header {
+        height: 10%;
+    }
+    .logo{
+        max-width: 65%;
+        max-height: 65%;
+    }
+   
+    .navigation_bar {
+        flex-direction: row;
+        height: 10%;
+    }
+
+    .nav_btn_Holder{
+        position: relative;
+        background-color: transparent;
+        top: 20px;
+        right: 100px;
+    }
+    
+    .nav_btn {
+        width: 75px;
+        height: 30px;
+        font-size: small;
+    }
+
+    .name {
+        position: absolute;
+        left: 80px;
+        text-align: center;
+        font-size: larger;
+    }
+}

@@ -1,13 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+::-webkit-scrollbar {
+    width: 3px;
+}
+::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px #131313e4; 
+border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+background: #ffffff32; 
+border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+background: #000000; 
+}
 
+#root{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 20rem;   
+    
+}
+#p_root{
+    display: flex;
+    position:fixed;
+    height: auto;
+    width: auto; 
+    z-index: 9002;
+    }
 *{
     box-sizing: border-box;
     font-family: "Barlow", serif;
     font-weight: 400;
     font-style: normal;
     color: #131313;
-
     background-color: #131313;
+    cursor: default;
+    transition: all 0,3s ease-in-out;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+main {
+    flex: 1; 
 }
 div{
     display: flex; 
@@ -17,10 +55,13 @@ div{
     margin: 0;
 }
 nav{
+    display: inline-flexbox;
     background-color: inherit;
 }
 ul{
     background-color: inherit;
+    padding: 0px;
+    margin: 0px;
 }
 li{
     display: inline-block;
@@ -28,68 +69,72 @@ li{
 }
 h1{
     font-weight: bolder;
-    background-color: inherit;
+    background-color: transparent;
+}
+a{
+    background-color: transparent;
 }
 .content{
-    margin-top: 20vh;
-}
-
-.header{
     display: flex;
-    background-color: green;
-    position: absolute;
-    height: 10vh;
-    top: 0;
+    margin-top: 20vh;
+    height: 100%;
     width: 100%;
-    
-}
-.navigation_bar{
-   
-display: inline-flex;
-background-color: green;
-position: fixed;
-height: 10vh;
-top: 0;
-width: 100%;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-between;
-align-items: center;
-align-content: center;
-padding-left: 2.5vw;
-padding-right: 2.5vw;
-overflow-y: hidden;
-box-shadow: 1vh 0vh #00000020;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    z-index: 9000;
 }
 
-.logo{
-    background-color: inherit;
-    max-width: 95%;
-    max-height: 95%;
+
+
+@media (max-width: 1360px) {
+
+    #root{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .content {
+        margin-top: 10vh;
+    }
 }
 
-.nav_btn{
-    position:relative;
-    align-content: center;
-    background-color: transparent;
-    border: none;
-    margin-right: 10px;
-    margin-left: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    transition: font-weight 0.5s ease-in-out, color 0.5s ease-in-out, font-size 0.5s ease-in-out, padding-left 0.5s ease-in-out, padding-right 0.5s ease-in-out;
-    cursor:pointer;
+@media (max-width: 1024px) {
+    #root{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .content {
+        margin-top: 10vh;
+        flex-direction: column;
+        align-items: center;
+    }
 }
-.nav_btn_active{
-    align-content: center;
-    background-color: transparent;
-    border: none;
-    font-weight: bolder;
-    font-size: larger;
-    margin-right: 10px;
-    margin-left: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    transition: font-weight 0.3s ease-in-out, color 0.3s ease-in-out, font-size 0.3s ease-in-out, padding-left 0.3s ease-in-out, padding-right 0.3s ease-in-out;
-    cursor: pointer;
+
+@media (max-width: 768px) {
+    #root{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .content {
+        margin-top: 10vh;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    #root{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .content {
+        margin-top: 10vh;
+        padding: 0 5%;
+    }
 }

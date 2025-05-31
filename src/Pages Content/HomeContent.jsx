@@ -1,7 +1,7 @@
-import Card from "./Card/Card";
-import "./Style/main.css"
+import Card from "../Card/Card";
+import "../Style/main.css"
 
-function Content(){
+export default function HomeContent(){
     return(
         
         <>      
@@ -11,8 +11,5 @@ function Content(){
         </>
     );
 
-
-
 }
 
-export default Content

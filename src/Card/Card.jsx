@@ -1,21 +1,36 @@
+import {createPortal} from 'react-dom'
+import { useEffect, useState } from 'react';
 import styles from './Card.module.css'
-import CardItem from '../CardItems.jsx';
-function Card(){
-    const min = 1;
-    const max = 200;
-    const randomInteger= Math.floor(min + Math.random()*(max-min))
+import {ExtendedCard, CompressedCard} from './CardItems.jsx';
+
+
+export default function Card(){
+    const [activeCard, setActiveCard] = useState(null);
+    function handleActiveCard(index){
+        setActiveCard(cardData[index]);
+    }
+ 
+    function ExitPopup(){
+        setActiveCard(null);
+    }
+
+    useEffect(() => {document.body.style.overflow=activeCard?"hidden":"auto";
+    return() =>{document.body.style.overflow="auto";}
+    }, [activeCard]);
     
+    //#region extended cards data
+
    const cardData = [
     {
         title: 'Creative Solutions',
         text: 'I specialize in turning unique ideas into functional and beautiful web experiences. Every project is crafted with precision and a touch of creativity to solve real-world problems effectively.',
-        imageUrl: './public/24.png',
+        imageUrl: '/24.png',
         
     },
     {
         title: 'Web Development Projects',
         text: 'Take a deep dive into the projects I’ve worked on, ranging from interactive landing pages to full-fledged web applications. Each showcases my expertise and commitment to quality.',
-        imageUrl: 'https://avatar.iran.liara.run/public/'+ randomInteger,
+        imageUrl: 'https://avatar.iran.liara.run/public/44',
     },
     {
         title: 'Skills & Expertise',
@@ -56,20 +71,37 @@ function Card(){
         title: 'My Coding Journey',
         text: 'From writing my first ‘Hello World’ to crafting dynamic web apps, coding has been an exciting journey of growth, challenges, and triumphs.',
         imageUrl: 'https://avatar.iran.liara.run/public/28',
-    }
-    
-];
+    }];
+//#endregion
 
-
-return (
-    <div className={styles.cardHolder}>
+    return (
+        <>
+    <div className={styles.card_holder}>
+        
         {cardData.map((item, index) => (
-            <CardItem key={index} title={item.title} text={item.text} imageUrl={item.imageUrl} />
+            <div className={styles.card_par} key={index} onClick={()=>handleActiveCard(index)}>
+                <CompressedCard key={index} title={item.title} imageUrl={item.imageUrl} />
+            </div>   
         ))}
     </div>
+    {activeCard&&(
+        
+        <CreatePopup card={activeCard} closePopup={ExitPopup}/>
+   
+    )}
+
+    
+    </>
 );
-
-} 
-export default Card
-
-
+function CreatePopup({card, closePopup}){
+    return createPortal(
+        <div className={styles.popup_overlay} onClick={closePopup}>
+            <div className={styles.card_par} onClick={(e)=>e.stopPropagation()}>
+                <ExtendedCard title={card.title} text ={card.text} imageUrl={card.imageUrl}/>
+            </div>
+        </div>,
+        document.getElementById('p_root')    
+    );
+    
+}
+}
