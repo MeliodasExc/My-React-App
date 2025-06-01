@@ -41,7 +41,7 @@ export default function AboutContent(){
         </div>
 */
 <>
-<section className="head_section">
+    <section className="head_section">
     <div className="head_section_content">
         <div className="head_section_content_text">
             <p className="about_column_content"> 
@@ -57,19 +57,24 @@ export default function AboutContent(){
                         and contact information—all in one place.
                         Join us in building a network where businesses thrive, and opportunities grow. Explore. Connect. Succeed.
                         </div>
-                    </p>
+            </p>
         </div>
         <div className="head_section_content_image">
-            <img src="/public/Aboutus-pholder.jpg" alt="About Us"/>
+            <img src="/public/Aboutus-pholder.png" alt="About Us"/>
         </div>
     </div>
     </section>
     <section className="logo_section">
         <div className="logo_section_content">
-            <img src="/src/assets/logoipsum-300.svg" alt="CardHub Logo" className="logo_section_content_image"/>
+            <div className="image_break">
+                <img src="/public/office-pholder.png" alt="Our Office"/>
             </div>
-        <div className="logo_section_content_text">
-            <p> 
+            <div className="logo_section_text-logo">
+                <div className="logo_section_content_logo">
+                    <img src="/src/assets/logoipsum-300.svg" alt="CardHub Logo"/>
+                </div>
+                <div className="logo_section_content_text">
+                    <p> 
                         <h1>Why choose us?</h1>
                         Trusted by Businesses
                         We connect thousands of companies with their target audience, providing visibility and engagement across industries.
@@ -84,8 +89,9 @@ export default function AboutContent(){
                         Secure & Reliable
                         Your data and business profile are protected with industry-standard security measures.
                     </p>
-                    </div>
-    
+                </div>
+            </div>
+        </div>
     </section>
     </>
     );
