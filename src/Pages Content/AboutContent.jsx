@@ -23,14 +23,14 @@ export default function AboutContent(){
             </p>
         </div>
         <div className="head_section_content_image">
-            <img src="/public/Aboutus-pholder.png" alt="About Us"/>
+            <img src="/src/assets/Aboutus-pholder.png" alt="About Us"/>
         </div>
     </div>
     </section>
     <section className="logo_section">
         <div className="logo_section_content">
             <div className="image_break">
-                <img src="/public/office-pholder.png" alt="Our Office" loading="eager"/>
+                <img src="/src/assets/office-pholder.png" alt="Our Office" loading="eager"/>
             </div>
             <div className="logo_section_text-logo">
                 <div className="logo_section_content_logo">

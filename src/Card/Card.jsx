@@ -24,7 +24,7 @@ export default function Card(){
     {
         title: 'Creative Solutions',
         text: 'I specialize in turning unique ideas into functional and beautiful web experiences. Every project is crafted with precision and a touch of creativity to solve real-world problems effectively.',
-        imageUrl: '/24.png',
+        imageUrl: '/src/assets/24.png',
         
     },
     {
