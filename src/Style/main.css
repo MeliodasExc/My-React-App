@@ -77,13 +77,14 @@ a{
 .content{
     display: flex;
     margin-top: 20vh;
-    height: 100%;
+    height: auto;
     width: 100%;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
+    overflow: auto;
     z-index: 9000;
 }
 

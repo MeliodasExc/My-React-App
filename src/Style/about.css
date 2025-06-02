@@ -44,7 +44,8 @@
     max-width: 90%;
     border-top-left-radius: 48%;
     border-bottom-left-radius: 48%;
-    filter: drop-shadow(0 0 20em #fff8e75e);
+    background-color: transparent;
+    filter: drop-shadow(0 0 20em #fff8e715);
 }
 .logo_section{
  margin-top: 2%;

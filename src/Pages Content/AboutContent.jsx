@@ -30,7 +30,7 @@ export default function AboutContent(){
     <section className="logo_section">
         <div className="logo_section_content">
             <div className="image_break">
-                <img src="/public/office-pholder.png" alt="Our Office"/>
+                <img src="/public/office-pholder.png" alt="Our Office" loading="eager"/>
             </div>
             <div className="logo_section_text-logo">
                 <div className="logo_section_content_logo">
